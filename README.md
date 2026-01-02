@@ -7,7 +7,7 @@ Análise sobre vendas e exportação de vinhos de uma empresa localizada no Rio 
 O projeto adota a **Arquitetura Medallion** (Bronze, Silver, Gold), um padrão de design de data lakehouse que garante a qualidade e a confiabilidade dos dados em cada estágio do pipeline. A implementação é realizada através de Notebooks utilizando a plataforma Databricks por meio de tecnologias de processamento distribuído (**Apache Spark** e **Delta Lake**).
 
 | Camada | Propósito | Características |
-
+| :--- | :--- | :--- |
 | **Bronze** | Ingestão de dados brutos (Raw Data). | Dados originais, sem transformações, mantendo o histórico e a fidelidade da fonte. |
 | **Silver** | Limpeza e Enriquecimento (Cleaned/Filtered Data). | Aplicação de regras de qualidade, filtragem, padronização e enriquecimento. Os dados estão prontos para análises mais detalhadas. |
 | **Gold** | Dados de Negócio (Business-Ready Data). | Dados agregados, sumarizados e modelados (Data Marts/Dimensional) para consumo direto por ferramentas de BI e relatórios. |
