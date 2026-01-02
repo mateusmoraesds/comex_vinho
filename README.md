@@ -1,4 +1,4 @@
-# Comex_vinho: Datalakehouse de uma empresa de Comércio de Vinhos.
+# Comex_vinho: Data lakehouse de uma empresa de Comércio de Vinhos.
 
 Análise sobre vendas e exportação de vinhos de uma empresa localizada no Rio Grande do Sul (RS). Este projeto implementa um pipeline de dados completo, seguindo a arquitetura Medallion, para transformar dados brutos em informações estratégicas prontas para consumo e análise de negócios.
 
