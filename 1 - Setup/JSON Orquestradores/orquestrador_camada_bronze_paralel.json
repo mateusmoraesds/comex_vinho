@@ -1,0 +1,78 @@
+{
+  "pipeline_name": "Carga_Bronze",
+  "fail_fast": true,
+  "jobs": [
+    {
+      "name": "bronze_comercio",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/2 - Bronze/bronze_comercio",
+      "target_table": "vitivinicultura.bronze_comercializacao.comercio",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "bronze_ExpEspumantes",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/2 - Bronze/bronze_ExpEspumantes",
+      "target_table": "vitivinicultura.bronze_exportacao.exportacao_espumantes",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "bronze_ExpSuco",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/2 - Bronze/bronze_ExpSuco",
+      "target_table": "vitivinicultura.bronze_exportacao.exportacao_sucos",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "bronze_ExpUva",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/2 - Bronze/bronze_ExpUva",
+      "target_table": "vitivinicultura.bronze_exportacao.exportacao_uvas",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "bronze_ExpVinho",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/2 - Bronze/bronze_ExpVinho",
+      "target_table": "vitivinicultura.bronze_exportacao.exportacao_vinhos",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "bronze_ProcessaAmericanas",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/2 - Bronze/bronze_ProcessaAmericanas",
+      "target_table": "vitivinicultura.bronze_processamento.processaamericanas",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "bronze_ProcessaMesa",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/2 - Bronze/bronze_ProcessaMesa",
+      "target_table": "vitivinicultura.bronze_processamento.processamesa",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "bronze_ProcessaViniferas",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/2 - Bronze/bronze_ProcessaViniferas",
+      "target_table": "vitivinicultura.bronze_processamento.processaviniferas",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "bronze_Producao",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/2 - Bronze/bronze_Producao",
+      "target_table": "vitivinicultura.bronze_producao.producao_geral",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    }
+  ]
+}

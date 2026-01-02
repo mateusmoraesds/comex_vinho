@@ -1,0 +1,38 @@
+{
+  "pipeline_name": "Carga_Gold",
+  "fail_fast": true,
+  "jobs": [
+    {
+      "name": "gold_comercio_vinhos",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/4 - Gold/gold_Comercializacao",
+      "target_table": "vitivinicultura.gold_comercializacao.comercio_vinhos",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "gold_dim_paises",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/4 - Gold/gold_dim_paises",
+      "target_table": "vitivinicultura.gold_cadastros.paises",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "gold_exportacao_vinhos",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/4 - Gold/gold_Exportacao_Vinhos",
+      "target_table": "vitivinicultura.gold_exportacao.exportacao_vinhos",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "gold_producao_geral",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/4 - Gold/gold_producao",
+      "target_table": "vitivinicultura.gold_producao.producao_geral",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    }
+  ]
+}

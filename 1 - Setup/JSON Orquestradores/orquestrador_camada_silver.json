@@ -1,0 +1,86 @@
+{
+  "pipeline_name": "Carga_Silver",
+  "fail_fast": true,
+  "jobs": [
+    {
+      "name": "silver_comercio",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/3 - Silver/silver_Comercio",
+      "target_table": "vitivinicultura.silver_comercializacao.comercio",
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "silver_ExpEspumantes",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/3 - Silver/silver_ExpEspumantes",
+      "target_table": "vitivinicultura.silver_exportacao.exportacao_espumantes",
+      "depends_on": ["silver_comercio"],
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "silver_ExpSuco",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/3 - Silver/silver_ExpSuco",
+      "target_table": "vitivinicultura.silver_exportacao.exportacao_sucos",
+      "depends_on": ["silver_ExpEspumantes"],
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "silver_ExpUva",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/3 - Silver/silver_ExpUva",
+      "target_table": "vitivinicultura.silver_exportacao.exportacao_uvas",
+      "depends_on": ["silver_ExpSuco"],
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "silver_ExpVinho",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/3 - Silver/silver_ExpVinhos",
+      "target_table": "vitivinicultura.silver_exportacao.exportacao_vinhos",
+      "depends_on": ["silver_ExpUva"],
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "silver_ProcessaAmericanas",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/3 - Silver/silver_ProcessaAmericanas",
+      "target_table": "vitivinicultura.silver_processamento.processaamericanas",
+      "depends_on": ["silver_ExpVinho"],
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "silver_ProcessaMesa",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/3 - Silver/silver_ProcessaMesa",
+      "target_table": "vitivinicultura.silver_processamento.processamesa",
+      "depends_on": ["silver_ProcessaAmericanas"],
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "silver_ProcessaViniferas",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/3 - Silver/silver_ProcessaViniferas",
+      "target_table": "vitivinicultura.silver_processamento.processaviniferas",
+      "depends_on": ["silver_ProcessaMesa"],
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    },
+    {
+      "name": "silver_Producao",
+      "path": "/Workspace/Users/mateusmoraesds@gmail.com/comex_vinho/3 - Silver/silver_Producao",
+      "target_table": "vitivinicultura.silver_producao.producao_geral",
+      "depends_on": ["silver_ProcessaViniferas"],
+      "params": {
+        "data_execucao": "{data_atual}"
+      }
+    }
+  ]
+}
