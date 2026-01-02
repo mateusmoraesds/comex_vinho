@@ -79,5 +79,6 @@ A camada Gold contém os dados finais, prontos para análise e consumo de negóc
 | `gold_producao.ipynb` | Criação de um Data Mart para análise de Produção. |
 
 
-Dúvidas, fico a disposição para contato na minha página do linkedin
+Dúvidas, fico a disposição para contato na minha página:
+|
 linkedin.com/mateusmoraesds/
